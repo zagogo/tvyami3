@@ -13,6 +13,8 @@
 
   <!-- Top Ad -->
   <script type='text/javascript' src='//pl26630947.profitableratecpm.com/91/50/ce/9150ce4b254464961b06ccaa256200ea.js'></script>
+  <script type='text/javascript' src='//pl26640661.profitableratecpm.com/32/da/24/32da24bbb349b1c40dc2190cabe48290.js'></script>
+  <script type='text/javascript' src='//pl26630947.profitableratecpm.com/91/50/ce/9150ce4b254464961b06ccaa256200ea.js'></script>
 
   <style>
     :root {
@@ -434,6 +436,23 @@
       max-width: 600px;
       border: 1px solid var(--primary-color);
     }
+
+    /* Next Video Button */
+    .next-video-btn {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .next-video-btn:hover {
+      background: #e03e00;
+    }
   </style>
 </head>
 <body>
@@ -617,6 +636,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
       <iframe id="modalVideo" class="modal-video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <button class="next-video-btn" onclick="playNextVideo()">Next Video ▶</button>
     </div>
   </div>
 
@@ -651,12 +671,34 @@
     }
 
     // Modal functions
+    let currentVideoIndex = 0;
+    const videoUrls = [
+      'https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview',
+      'https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview',
+      'https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1',
+      'https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1',
+      'https://www.youtube.com/embed/LOwyDHQzLQs?autoplay=1',
+      'https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1',
+      'https://www.youtube.com/embed/GrNNglupZPA?autoplay=1',
+      'https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1',
+      'https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview',
+      'https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview',
+      'https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview',
+      'https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview'
+    ];
+
     function openModal(videoUrl) {
       const modal = document.getElementById('videoModal');
       const modalVideo = document.getElementById('modalVideo');
+      currentVideoIndex = videoUrls.indexOf(videoUrl);
       modalVideo.src = videoUrl;
       modal.style.display = "block";
       document.body.style.overflow = "hidden";
+    }
+
+    function playNextVideo() {
+      currentVideoIndex = (currentVideoIndex + 1) % videoUrls.length;
+      document.getElementById('modalVideo').src = videoUrls[currentVideoIndex];
     }
 
     function closeModal() {

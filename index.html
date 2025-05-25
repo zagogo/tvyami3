@@ -735,23 +735,52 @@
 
     // Content database for search
     const contentDatabase = [
-      { title: "A United Kingdom", year: "2017", url: "https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview", type: "movie" },
-      { title: "Air", year: "2023", url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview", type: "movie" },
-      { title: "Killer Body", year: "2023", url: "https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1", type: "movie" },
-      { title: "The Perfect Find", year: "2023", url: "https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1", type: "movie" },
-      { title: "The Tutor", year: "2023", url: "https://www.youtube.com/embed/LOwyDHQzLQs?autoplay=1", type: "movie" },
-      { title: "The Locksmith", year: "2023", url: "https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1", type: "movie" },
-      { title: "The Ritual Killer", year: "2023", url: "https://www.youtube.com/embed/GrNNglupZPA?autoplay=1", type: "movie" },
-      { title: "Beautiful Disaster", year: "2023", url: "https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1", type: "movie" },
-      { title: "American Fiction", year: "2023", url: "https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview", type: "movie" },
-      { title: "Amsterdam", year: "2023", url: "https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview", type: "movie" },
-      { title: "Dear Basketball", year: "2017", url: "https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview", type: "movie" },
-      { title: "Dangerous Lies", year: "2020", url: "https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview", type: "movie" },
-      { title: "Skeem Saam", year: "2023", url: "https://tvyami.blogspot.com/search/label/skeemsaam", type: "series" },
-      { title: "Ithonga", year: "2023", url: "https://tvyami.blogspot.com/search/label/ithonga", type: "series" },
-      { title: "Genesis", year: "2023", url: "https://tvyami.blogspot.com/search/label/genesis", type: "series" },
-      { title: "Xrepo", year: "2023", url: "https://tvyami.blogspot.com/search/label/xrepo", type: "series" }
-    ];
+    { 
+        title: "A United Kingdom (2017)", 
+        year: "2017", 
+        url: "https://drive.google.com/file/d/1aXNXRaSqb" 
+    },
+    { 
+        title: "Air (2023)", 
+        year: "2023", 
+        url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQg" 
+    },
+    { 
+        title: "Killer Body (2023)", 
+        year: "2023", 
+        url: "https://www.youtube.com/embed/ZUG3jxb9bFM?autop" 
+    },
+    { 
+        title: "The Perfect Find (2023)", 
+        year: "2023", 
+        url: "https://www.youtube.com/embed/XiImoJwpfJ8" 
+    },
+    { 
+        title: "The Tutor (2023)", 
+        year: "2023", 
+        url: "https://www.youtube.com/embed/L0wyDHQzLQs" 
+    },
+    { 
+        title: "The Locksmith (2023)", 
+        year: "2023", 
+        url: "https://www.youtube.com/embed/L3dIFAw7XVI" 
+    },
+    { 
+        title: "The Ritual Killer (2023)", 
+        year: "2023", 
+        url: "https://www.youtube.com/embed/GrWNglupZPA" 
+    },
+    { 
+        title: "Beautiful Disaster (2023)", 
+        year: "2023", 
+        url: "https://www.youtube.com/embed/wkqKnmWbzL" 
+    },
+    { 
+        title: "American Fiction (2023)", 
+        year: "2023", 
+        url: "https://drive.google.com/file/d/1DYLjdSdql" 
+    }
+];
 
     // Search functionality
     const searchInput = document.getElementById('searchInput');
@@ -933,7 +962,9 @@
             : 'https://via.placeholder.com/300x450?text=No+Thumbnail'}" 
             style="width:100%; height:200px; object-fit:cover; border-radius:8px; border:2px solid #FF4500;"
             onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
-          <div style="margin-top:8px; font-size:14px; color:#FFD700; text-align:center;">
+          <div class="video-title" style="text-align:left; padding:0 10px; margin-bottom:10px;">
+  ${video.videoTitle || video.title} ${video.year ? '('+video.year+')' : ''}
+</div>
             ${video.title} (${video.year})
           </div>
         `;

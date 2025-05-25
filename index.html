@@ -726,250 +726,126 @@
   </footer>
 
   <script>
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-      document.body.setAttribute('data-theme', 
-        document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
-    });
+   // Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  document.body.setAttribute('data-theme', 
+    document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
+});
 
-    // Content database for search
-    const contentDatabase = [
-    { 
-        title: "A United Kingdom (2017)", 
-        year: "2017", 
-        url: "https://drive.google.com/file/d/1aXNXRaSqb" 
-    },
-    { 
-        title: "Air (2023)", 
-        year: "2023", 
-        url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQg" 
-    },
-    { 
-        title: "Killer Body (2023)", 
-        year: "2023", 
-        url: "https://www.youtube.com/embed/ZUG3jxb9bFM?autop" 
-    },
-    { 
-        title: "The Perfect Find (2023)", 
-        year: "2023", 
-        url: "https://www.youtube.com/embed/XiImoJwpfJ8" 
-    },
-    { 
-        title: "The Tutor (2023)", 
-        year: "2023", 
-        url: "https://www.youtube.com/embed/L0wyDHQzLQs" 
-    },
-    { 
-        title: "The Locksmith (2023)", 
-        year: "2023", 
-        url: "https://www.youtube.com/embed/L3dIFAw7XVI" 
-    },
-    { 
-        title: "The Ritual Killer (2023)", 
-        year: "2023", 
-        url: "https://www.youtube.com/embed/GrWNglupZPA" 
-    },
-    { 
-        title: "Beautiful Disaster (2023)", 
-        year: "2023", 
-        url: "https://www.youtube.com/embed/wkqKnmWbzL" 
-    },
-    { 
-        title: "American Fiction (2023)", 
-        year: "2023", 
-        url: "https://drive.google.com/file/d/1DYLjdSdql" 
-    }
+// Content Database - WITH FIXED TITLES
+const contentDatabase = [
+  { 
+    displayTitle: "A United Kingdom (2017)", // Exact title you want
+    title: "A United Kingdom", 
+    year: "2017", 
+    url: "https://drive.google.com/file/d/1aXNXRaSqb" 
+  },
+  { 
+    displayTitle: "Air (2023)", 
+    title: "Air", 
+    year: "2023", 
+    url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQg" 
+  },
+  // ... [copy ALL your videos in this format] ...
 ];
-    // Search functionality
-    const searchInput = document.getElementById('searchInput');
-    const searchResults = document.getElementById('searchResults');
 
-    searchInput.addEventListener('input', function() {
-      const query = this.value.toLowerCase();
-      searchResults.innerHTML = '';
-      
-      if (query.length < 2) {
-        searchResults.style.display = 'none';
-        return;
-      }
-      
-      const results = contentDatabase.filter(item => 
-        item.title.toLowerCase().includes(query) || 
-        item.year.includes(query) ||
-        item.type.includes(query)
-      );
-      
-      if (results.length > 0) {
-        results.forEach(item => {
-          const resultItem = document.createElement('div');
-          resultItem.className = 'search-result-item';
-          resultItem.innerHTML = `
-            <strong>${item.title}</strong> (${item.year}) - ${item.type}
-          `;
-          resultItem.addEventListener('click', () => {
-            if (item.url.includes('youtube.com') || item.url.includes('drive.google.com')) {
-              openModal(item.url, `${item.title} (${item.year})`);
-            } else {
-              window.open(item.url, '_blank');
-            }
-            searchResults.style.display = 'none';
-            searchInput.value = '';
-          });
-          searchResults.appendChild(resultItem);
-        });
-        searchResults.style.display = 'block';
-      } else {
-        const noResults = document.createElement('div');
-        noResults.className = 'search-result-item';
-        noResults.textContent = 'No results found';
-        searchResults.appendChild(noResults);
-        searchResults.style.display = 'block';
-      }
-    });
+// Search Functionality
+document.getElementById('searchInput').addEventListener('input', function() {
+  // ... [keep your existing search code] ...
+});
 
-    // Close search results when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
-        searchResults.style.display = 'none';
-      }
-    });
-
-    // Modal functions
-    let currentVideoIndex = 0;
-    const videoUrls = contentDatabase.filter(item => 
-      item.url.includes('youtube.com') || item.url.includes('drive.google.com')
-    ).map(item => ({
-      url: item.url,
-      title: `${item.title} (${item.year})`
-    }));
-
-    function openModal(videoUrl, videoTitle = '') {
-      const modal = document.getElementById('videoModal');
-      const modalVideo = document.getElementById('modalVideo');
-      const videoTitleElement = document.getElementById('currentVideoTitle');
-      
-      currentVideoIndex = videoUrls.findIndex(item => item.url === videoUrl);
-      modalVideo.src = videoUrl;
-      videoTitleElement.textContent = videoTitle;
-      modal.style.display = "block";
-      document.body.style.overflow = "hidden";
-    }
-
-    function playNextVideo() {
-      currentVideoIndex = (currentVideoIndex + 1) % videoUrls.length;
-      const nextVideo = videoUrls[currentVideoIndex];
-      document.getElementById('modalVideo').src = nextVideo.url;
-      document.getElementById('currentVideoTitle').textContent = nextVideo.title;
-    }
-
-    function closeModal() {
-      const modal = document.getElementById('videoModal');
-      const modalVideo = document.getElementById('modalVideo');
-      modalVideo.src = "";
-      modal.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      const modal = document.getElementById('videoModal');
-      if (event.target == modal) {
-        closeModal();
-      }
-    }
-
-    // Carousel functionality
-    let currentCarouselIndex = 0;
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const carouselInner = document.querySelector('.carousel-inner');
-
-    function moveCarousel(direction) {
-      currentCarouselIndex += direction;
-      
-      if (currentCarouselIndex < 0) {
-        currentCarouselIndex = carouselItems.length - 1;
-      } else if (currentCarouselIndex >= carouselItems.length) {
-        currentCarouselIndex = 0;
-      }
-      
-      carouselInner.style.transform = `translateX(-${currentCarouselIndex * 100}%)`;
-    }
-
-    // Auto-rotate carousel
-    setInterval(() => {
-      moveCarousel(1);
-    }, 5000);
-
-    // Make search work on Enter key
-    document.getElementById('searchInput').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        const query = this.value.toLowerCase();
-        if (query.length > 0) {
-          const results = contentDatabase.filter(item => 
-            item.title.toLowerCase().includes(query) || 
-            item.year.includes(query) ||
-            item.type.includes(query)
-          );
-          
-          if (results.length > 0) {
-            if (results[0].url.includes('youtube.com') || results[0].url.includes('drive.google.com')) {
-              openModal(results[0].url, `${results[0].title} (${results[0].year})`);
-            } else {
-              window.open(results[0].url, '_blank');
-            }
-          }
-          searchResults.style.display = 'none';
-        }
-      }
-    });
-
-    // Ad fallback handling
-    window.addEventListener('load', function() {
-      const adContainers = document.querySelectorAll('.ad-container');
-      adContainers.forEach(container => {
-        const iframes = container.getElementsByTagName('iframe');
-        if (iframes.length === 0) {
-          const fallback = container.querySelector('.ad-fallback');
-          if (fallback) fallback.style.display = 'block';
-        }
-      });
-    });
-    function showAllVideos() {
-  // Hide other sections
-  document.querySelectorAll('.section').forEach(section => {
-    section.style.display = 'none';
-  });
-  
-  // Show all videos section
-  const allVideosSection = document.getElementById('allVideosSection');
-  allVideosSection.style.display = 'block';
-  
-  // Populate videos if empty
-  const container = document.getElementById('allVideosContainer');
-  if (container.children.length === 0) {
-    contentDatabase
-      .filter(video => video.url.includes('youtube.com') || video.url.includes('drive.google.com'))
-      .sort((a,b) => a.title.localeCompare(b.title))
-      .forEach(video => {
-        const videoItem = document.createElement('div');
-        videoItem.style.width = '150px';
-        videoItem.style.cursor = 'pointer';
-        videoItem.innerHTML = `
-          <img src="${video.url.includes('youtube.com') 
-            ? 'https://i.ytimg.com/vi/'+video.url.split('/embed/')[1].split('?')[0]+'/maxresdefault.jpg' 
-            : 'https://via.placeholder.com/300x450?text=No+Thumbnail'}" 
-            style="width:100%; height:200px; object-fit:cover; border-radius:8px; border:2px solid #FF4500;"
-            onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
-          <div style="margin-top:8px; font-size:14px; color:#FFD700; text-align:center;">
-            ${video.title} (${video.year})
-          </div>
-        `;
-        videoItem.onclick = () => openModal(video.url, `${video.title} (${video.year})`);
-        container.appendChild(videoItem);
-      });
-  }
+// Modal Player Functions
+function openModal(videoUrl, videoTitle) {
+  // ... [keep your existing modal code] ...
 }
+
+// All Videos Feature
+document.getElementById('showAllVideosBtn').addEventListener('click', function() {
+  const container = document.getElementById('allVideosContainer');
+  container.innerHTML = ''; // Clear previous
+  
+  contentDatabase.forEach(video => {
+    const videoItem = document.createElement('div');
+    videoItem.className = 'all-videos-item';
+    videoItem.innerHTML = `
+      <img src="${getThumbnail(video.url)}" class="all-videos-thumbnail">
+      <div class="all-videos-title">${video.displayTitle || video.title}</div>
+    `;
+    videoItem.onclick = () => openModal(video.url, video.displayTitle || video.title);
+    container.appendChild(videoItem);
+  });
+});
+
+// Helper function for thumbnails
+function getThumbnail(url) {
+  if (url.includes('youtube.com')) {
+    const vidId = url.split('/embed/')[1].split('?')[0];
+    return `https://i.ytimg.com/vi/${vidId}/maxresdefault.jpg`;
+  }
+  return 'https://via.placeholder.com/300x450?text=No+Thumbnail';
+}
+</script>
+  // Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  document.body.setAttribute('data-theme', 
+    document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
+});
+
+// Content Database - WITH FIXED TITLES
+const contentDatabase = [
+  { 
+    displayTitle: "A United Kingdom (2017)", // Exact title you want
+    title: "A United Kingdom", 
+    year: "2017", 
+    url: "https://drive.google.com/file/d/1aXNXRaSqb" 
+  },
+  { 
+    displayTitle: "Air (2023)", 
+    title: "Air", 
+    year: "2023", 
+    url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQg" 
+  },
+  // ... [copy ALL your videos in this format] ...
+];
+
+// Search Functionality
+document.getElementById('searchInput').addEventListener('input', function() {
+  // ... [keep your existing search code] ...
+});
+
+// Modal Player Functions
+function openModal(videoUrl, videoTitle) {
+  // ... [keep your existing modal code] ...
+}
+
+// All Videos Feature
+document.getElementById('showAllVideosBtn').addEventListener('click', function() {
+  const container = document.getElementById('allVideosContainer');
+  container.innerHTML = ''; // Clear previous
+  
+  contentDatabase.forEach(video => {
+    const videoItem = document.createElement('div');
+    videoItem.className = 'all-videos-item';
+    videoItem.innerHTML = `
+      <img src="${getThumbnail(video.url)}" class="all-videos-thumbnail">
+      <div class="all-videos-title">${video.displayTitle || video.title}</div>
+    `;
+    videoItem.onclick = () => openModal(video.url, video.displayTitle || video.title);
+    container.appendChild(videoItem);
+  });
+});
+
+// Helper function for thumbnails
+function getThumbnail(url) {
+  if (url.includes('youtube.com')) {
+    const vidId = url.split('/embed/')[1].split('?')[0];
+    return `https://i.ytimg.com/vi/${vidId}/maxresdefault.jpg`;
+  }
+  return 'https://via.placeholder.com/300x450?text=No+Thumbnail';
+}
+</script>
   </script>
 </body>
 </html>

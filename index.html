@@ -16,59 +16,60 @@
   <script async src='//pl26640661.profitableratecpm.com/32/da/24/32da24bbb349b1c40dc2190cabe48290.js'></script>
 
   <style>
-/* Header with sticky navigation */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: var(--bg-color);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  padding: 10px 0;
-  border-bottom: 1px solid var(--primary-color);
-}
+    :root {
+      --primary-color: #FF4500;
+      --secondary-color: #FFD700;
+      --bg-color: #000;
+      --text-color: #fff;
+      --card-bg: #111;
+      --modal-bg: rgba(0, 0, 0, 0.9);
+    }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.logo-img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+    [data-theme="light"] {
+      --primary-color: #E74C3C;
+      --secondary-color: #F39C12;
+      --bg-color: #f5f5f5;
+      --text-color: #333;
+      --card-bg: #fff;
+      --modal-bg: rgba(255, 255, 255, 0.95);
+    }
+    /* All Videos section */
+.all-videos-section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--card-bg);
   border-radius: 10px;
 }
 
-/* Mobile menu button */
-.mobile-menu-btn {
-  display: none;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px auto;
+.all-videos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.all-videos-item {
+  width: 150px;
   cursor: pointer;
 }
 
-/* Responsive styles for navigation */
-@media (max-width: 767px) {
-  .mobile-menu-btn {
-    display: block;
-  }
-  
-  .categories {
-    display: none;
-    flex-direction: column;
-    padding: 10px;
-  }
-  
-  .categories.show {
-    display: flex;
-  }
+.all-videos-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
 }
+    
+.all-videos-title {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -107,7 +108,14 @@
       margin: 20px auto;
       position: relative;
     }
+<!-- All Videos Button -->
+<button class="watch-now" id="showAllVideosBtn">📺 Show All Videos (A-Z)</button>
 
+<!-- All Videos Section (initially hidden) -->
+<div class="section" id="allVideosSection" style="display:none;">
+  <h2>All Videos (A-Z)</h2>
+  <div class="all-videos-container" id="allVideosContainer"></div>
+</div>
     .search-bar {
       width: 100%;
       padding: 12px 20px;
@@ -565,33 +573,19 @@
     <div class="search-results" id="searchResults"></div>
   </div>
 
- <!-- Header with Logo and Navigation -->
-<div class="header">
-  <div class="logo-container">
-    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' ry='20' fill='black'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='white'>📺</text></svg>" 
-         alt="TV Yami Logo" class="logo-img">
-    <h1>TV Yami</h1>
-  </div>
-
-  <!-- Mobile Menu Button -->
-  <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Menu</button>
-
-  <!-- Main Navigation -->
-  <div class="categories" id="mainNav">
+  <div class="categories">
     <a class="category" href="https://tvyami.blogspot.com/search/label/movies?&max-results=6" target="_blank">Movies</a>
     <a class="category" href="https://mzansimovie.blogspot.com/search/label/SERIES?&max-results=6" target="_blank">Series</a>
-    <a class="category" href="https://tvyami.blogspot.com/search/label/South%20African%20TV%20Shows?&max-results=6" target="_blank">SA TV Shows</a>
+    <a class="category" href="https://tvyami.blogspot.com/search/label/South%20African%20TV%20Shows?&max-results=6" target="_blank">South African TV Shows</a>
     <a class="subcategory" href="https://tvyami.blogspot.com/search/label/xrepo?&max-results=6" target="_blank">Xrepo</a>
     <a class="subcategory" href="https://tvyami.blogspot.com/search/label/skeemsaam?&max-results=6" target="_blank">Skeem Saam</a>
     <a class="subcategory" href="https://tvyami.blogspot.com/search/label/ithonga?&max-results=6" target="_blank">Ithonga</a>
     <a class="subcategory" href="https://tvyami.blogspot.com/search/label/genesis?&max-results=6" target="_blank">Genesis</a>
-    <a class="category" href="https://tvyami.blogspot.com/search/label/American%20TV%20Shows?&max-results=6" target="_blank">US TV Shows</a>
+    <a class="category" href="https://tvyami.blogspot.com/search/label/American%20TV%20Shows?&max-results=6" target="_blank">American TV Shows</a>
     <a class="category" href="https://tvyami.blogspot.com/search/label/Documentaries?&max-results=6" target="_blank">Documentaries</a>
     <a class="category" href="https://tvyami.blogspot.com/search/label/Comedy?&max-results=6" target="_blank">Comedy</a>
-    <a class="category" href="#" id="allVideosBtn">All Videos</a>
-    <a class="category" href="#" id="seriesBtn">TV Series</a>
   </div>
-</div>
+
   <button class="watch-now" onclick="window.open('https://tvyami.blogspot.com/', '_blank')">🎬 Watch Now</button>
 
   <!-- Google Drive Videos Section (Now First) -->
@@ -776,13 +770,7 @@
       document.body.setAttribute('data-theme', 
         document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
     });
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mainNav = document.getElementById('mainNav');
 
-mobileMenuBtn.addEventListener('click', () => {
-  mainNav.classList.toggle('show');
-});
     // Content database for search
     const contentDatabase = [
       { title: "A United Kingdom", year: "2017", url: "https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview", type: "movie" },
@@ -802,7 +790,46 @@ mobileMenuBtn.addEventListener('click', () => {
       { title: "Genesis", year: "2023", url: "https://tvyami.blogspot.com/search/label/genesis", type: "series" },
       { title: "Xrepo", year: "2023", url: "https://tvyami.blogspot.com/search/label/xrepo", type: "series" }
     ];
+// All Videos functionality
+const showAllVideosBtn = document.getElementById('showAllVideosBtn');
+const allVideosSection = document.getElementById('allVideosSection');
+const allVideosContainer = document.getElementById('allVideosContainer');
 
+showAllVideosBtn.addEventListener('click', function() {
+  // Hide other sections if needed
+  document.querySelectorAll('.section').forEach(section => {
+    if (section.id !== 'allVideosSection') {
+      section.style.display = 'none';
+    }
+  });
+  
+  // Show all videos section
+  allVideosSection.style.display = 'block';
+  
+  // Populate all videos if not already loaded
+  if (allVideosContainer.children.length === 0) {
+    const sortedVideos = [...contentDatabase]
+      .filter(item => item.url.includes('youtube.com') || item.url.includes('drive.google.com'))
+      .sort((a, b) => a.title.localeCompare(b.title));
+    
+    sortedVideos.forEach(video => {
+      const videoItem = document.createElement('div');
+      videoItem.className = 'all-videos-item';
+      videoItem.innerHTML = `
+        <img src="${video.url.includes('youtube.com') ? 
+          `https://i.ytimg.com/vi/${video.url.split('/embed/')[1].split('?')[0]}/maxresdefault.jpg` : 
+          'https://via.placeholder.com/300x450?text=No+Thumbnail'}" 
+          class="all-videos-thumbnail" alt="${video.title}" 
+          onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+        <div class="all-videos-title">${video.title} (${video.year})</div>
+      `;
+      videoItem.addEventListener('click', () => {
+        openModal(video.url, `${video.title} (${video.year})`);
+      });
+      allVideosContainer.appendChild(videoItem);
+    });
+  }
+});
     // Search functionality
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');

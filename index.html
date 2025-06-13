@@ -416,7 +416,12 @@
       background-color: rgba(255, 69, 0, 1);
     }
     
-    /* Content preview styles */
+<style>
+    /* [Your existing CSS above...] */
+
+    /* ======= TV SERIES ADDITIONS START ======= */
+    /* Enhanced Content Preview */
+/* Content preview styles */
     .content-preview {
       display: flex;
       flex-wrap: wrap;
@@ -494,6 +499,23 @@
       100% { transform: rotate(360deg); }
     }
 
+    <div class="content-preview">
+  <!-- Existing Godfather of Harlem -->
+  <div class="preview-item" onclick="showSeasons('godfather', event)">
+    <!-- ... -->
+  </div>
+
+  <!-- Love is blind -->
+  <div class="preview-item" onclick="showSeasons('Love is blind', event)">
+    <div class="thumbnail-container" style="height: 250px;">
+      <img src="https://icecreamconvos.com/wp-content/uploads/2024/02/Love-Is-Blind-Season-6.jpeg" 
+           alt="Love is blind" class="preview-thumbnail">
+      <div class="play-button"></div>
+    </div>
+    <div class="preview-title">Love is blind</div>
+  </div>
+</div>
+
     /* Ad container styling */
     .ad-container {
       margin: 20px 0;
@@ -531,14 +553,9 @@
   </div>
 
   <div class="categories">
-    <a class="category" href="https://tvyami.blogspot.com/search/label/movies?&max-results=6" target="_blank">Movies</a>
-    <a class="category" href="https://mzansimovie.blogspot.com/search/label/SERIES?&max-results=6" target="_blank">Series</a>
     <a class="category" href="https://tvyami.blogspot.com/search/label/South%20African%20TV%20Shows?&max-results=6" target="_blank">South African TV Shows</a>
     <a class="subcategory" href="https://tvyami.blogspot.com/search/label/xrepo?&max-results=6" target="_blank">Xrepo</a>
-    <a class="subcategory" href="https://tvyami.blogspot.com/search/label/skeemsaam?&max-results=6" target="_blank">Skeem Saam</a>
     <a class="subcategory" href="https://tvyami.blogspot.com/search/label/ithonga?&max-results=6" target="_blank">Ithonga</a>
-    <a class="subcategory" href="https://tvyami.blogspot.com/search/label/genesis?&max-results=6" target="_blank">Genesis</a>
-    <a class="category" href="https://tvyami.blogspot.com/search/label/American%20TV%20Shows?&max-results=6" target="_blank">American TV Shows</a>
     <a class="category" href="https://tvyami.blogspot.com/search/label/Documentaries?&max-results=6" target="_blank">Documentaries</a>
     <a class="category" href="https://tvyami.blogspot.com/search/label/Comedy?&max-results=6" target="_blank">Comedy</a>
   </div>
@@ -554,17 +571,17 @@
   <div class="section">
     <h2>Featured Movies</h2>
     <div class="video-section">
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview', 'A United Kingdom (2017)')">
-        <div class="video-title">A United Kingdom (2017)</div>
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1dTaQmZm-4VXGnZIHEsCKAJoZxqe9iHob/preview', 'The Fast and the Furious (2001)')">
+        <div class="video-title">The Fast and the Furious (2001)</div>
         <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BMTQ2NjE4NDE2NV5BMl5BanBnXkFtZTgwOTcwNDk5MTI@._V1_FMjpg_UX1000_.jpg" alt="A United Kingdom thumbnail">
+          <img src="https://ntvb.tmsimg.com/assets/p27779_v_h10_bb.jpg?w=960&h=540" alt="The Fast and the Furious thumbnail">
           <div class="play-button"></div>
         </div>
       </div>
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview', 'Air (2023)')">
-        <div class="video-title">Air (2023)</div>
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1xJSvwMAWfCLaIV9aQ1TitnFOUxBpjaYa/preview', 'Sinners (2025)')">
+        <div class="video-title">Sinners (2025)</div>
         <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BOWE1YzQ4YTAtODJlYS00YzJkLTk5NjktOWIyYzFkMjYzMjE2XkEyXkFqcGdeQXVyMTUzOTcyODA5._V1_FMjpg_UX1000_.jpg" alt="Air thumbnail">
+          <img src="https://img.megaplextheatres.com/FilmBackdrop/HO00003588" alt="Sinners thumbnail">
           <div class="play-button"></div>
         </div>
       </div>
@@ -572,121 +589,844 @@
   </div>
 
   <!-- Mid Ad Position -->
-  <div class="social-ad">
-    <div class="ad-container">
+  <div class="social-ad"
       <script type="text/javascript" src="//www.highperformanceformat.com/9fe4ec7851720a430fcc8b0183179c46/invoke.js"></script>
       <div id="container-9fe4ec7851720a430fcc8b0183179c46"></div>
     </div>
   </div>
-
-   <!-- YouTube Videos Carousel -->
-  <div class="section">
-    <h2>Popular Videos</h2>
-    <div class="carousel">
-      <button class="carousel-control prev" onclick="moveCarousel(-1)">❮</button>
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1')">
-            <div class="video-title">Big Fish & Begonia (2016) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/ZUG3jxb9bFM/maxresdefault.jpg" alt="Killer Body thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1')">
-            <div class="video-title">The Great Santini (1979) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/XiImoJwpfJ8/maxresdefault.jpg" alt="The Perfect Find thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/LOwyDHQzLQs?autoplay=1')">
-            <div class="video-title">The Devils Female (1974) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/LOwyDHQzLQs/maxresdefault.jpg" alt="The Tutor thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1')">
-            <div class="video-title">Parallel (2024) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/L3dIFNw7XVI/maxresdefault.jpg" alt="The Locksmith thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/GrNNglupZPA?autoplay=1')">
-            <div class="video-title">Claudine (1974) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/GrNNglupZPA/maxresdefault.jpg" alt="The Ritual Killer thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1')">
-            <div class="video-title">Robbin (2024) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/wkqKnmWbzLw/maxresdefault.jpg" alt="Beautiful Disaster thumbnail">
-              <div class="play-button"></div>
-            </div>
+  
+  <!-- YouTube Videos Carousel -->
+<div class="section" onclick="window.open('https://youtube.com/@tvyami_sa?si=ugctEa3mlEYTPY3L', '_blank')" style="cursor: pointer; position: relative;">
+  <div style="position: absolute; top: 10px; right: 10px; color: var(--secondary-color); font-size: 14px;">
+    (Click anywhere to visit our channel)
+  </div>
+  <h2>Movies from our YouTube channel (subscribe)</h2>
+  <div class="carousel">
+    <button class="carousel-control prev" onclick="event.stopPropagation(); moveCarousel(-1)">❮</button>
+    <div class="carousel-inner" onclick="event.stopPropagation()">
+      <!-- Movie 1 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/Pail6KcM6DY?autoplay=1', 'Clown (2014) Full Movie')">
+          <div class="video-title">Clown (2014) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/e8918b89059f0addeb8543036c52009a686d5d883def6191d7759f62e8954542.jpg" alt="Clown (2014)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
           </div>
         </div>
       </div>
-      <button class="carousel-control next" onclick="moveCarousel(1)">❯</button>
+      
+      <!-- Movie 2 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/NYIwm4SBx2s?autoplay=1', 'Our Song (2000) Full Movie')">
+          <div class="video-title">Our Song (2000) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EXtaxk-Y3dVEUFbtsOqK7tbFF6AvILrttAwBDU3-soAjk2IYcvZYSLqApshkXPqlhjM&usqp=CAU" alt="Our Song (2000)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Movie 3 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/G6yydjUU68A?autoplay=1', 'Claudine (1974) Full Movie')">
+          <div class="video-title">Claudine (1974) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeCXD-WxMzovkZZu7gjE4AdM1wwSh00xNSBw&s" alt="Claudine (1974)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Movie 4 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/CBfyQGJveEk?autoplay=1', 'Adult Best Friends (2024) Full Movie')">
+          <div class="video-title">Adult Best Friends (2024) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://images.cdn.prd.api.discomax.com/2025/04/18/ccc509c0-b87c-3de8-af04-eb49fe5c4254.jpeg?f=jpg&q=75&w=1280&w=1200" alt="Adult Best Friends (2024)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Movie 5 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/w7oKSL52DYI?autoplay=1', 'Parallel (2024) Full Movie')">
+          <div class="video-title">Parallel (2024) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/2024/02/the-cast-of-parallel-with-different-faces-and-alternate-realities.jpg" alt="Parallel (2024)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Movie 6 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/bFh8WoTGVI4?autoplay=1', 'If Looks Could Kill (2016) Full Movie')">
+          <div class="video-title">If Looks Could Kill (2016) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://gruesomemagazine.com/wp-content/uploads/sites/6/2017/04/gruesome-banner-iflookscouldkill.jpg" alt="If Looks Could Kill (2016)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Movie 7 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/WrKaKT-ggOQ?autoplay=1', 'The Great Santini (1979) Full Movie')">
+          <div class="video-title">The Great Santini (1979) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://ntvb.tmsimg.com/assets/p7246_v_h10_aa.jpg?w=1280&h=720" alt="The Great Santini (1979)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Movie 8 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/U3xeIhb23hQ?autoplay=1', 'A Southern Haunting (2023) Full Movie')">
+          <div class="video-title">A Southern Haunting (2023) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNI2SJ0F1Tqi9jvIpXVypttl9eoUetVOy-xA&s" alt="A Southern Haunting (2023)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Movie 9 -->
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/IeQIddERm4o?autoplay=1', 'Swerve (2011) Full Movie')">
+          <div class="video-title">Swerve (2011) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://resizing.flixster.com/-Aa5kIxRLzxWQ7jdBFqpCZmX8Uc=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9563836_v_h9_aa.jpg" alt="Swerve (2011)" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control next" onclick="event.stopPropagation(); moveCarousel(1)">❯</button>
+  </div>
+</div>
+  
+<!-- TV Series Section -->
+<div class="section">
+  <h2>Popular TV Series</h2>
+  <div class="content-preview" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <!-- Godfather of Harlem -->
+    <div class="preview-item" onclick="showSeasons('godfather', event)" style="width: 30%; min-width: 200px;">
+      <div class="thumbnail-container" style="height: 250px;">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTg4MWVjMjYtZGZhYS00MzlmLWFiYmItNDc1OGNmMzczZTM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+             alt="Godfather of Harlem" class="preview-thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="play-button"></div>
+      </div>
+      <div class="preview-title">Godfather of Harlem</div>
+    </div>
+    
+    <!-- FOREVER (2025) -->
+    <div class="preview-item" onclick="showSeasons('forever', event)" style="width: 30%; min-width: 200px;">
+      <div class="thumbnail-container" style="height: 250px;">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDE2OTQ0NjEtNmEwMC00NmRjLThiOGMtN2M1N2Q2YWY0NGY4XkEyXkFqcGc@._V1_.jpg" 
+             alt="FOREVER (2025)" class="preview-thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="play-button"></div>
+      </div>
+      <div class="preview-title">FOREVER (2025)</div>
+    </div>
+    
+    <!-- Ginny & Georgia -->
+    <div class="preview-item" onclick="showSeasons('ginny-georgia', event)" style="width: 30%; min-width: 200px;">
+      <div class="thumbnail-container" style="height: 250px;">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzFiZTE4MWYtYzNlYi00ZGY0LTg5YjQtMzUxYTQ3NzcyOWQ1XkEyXkFqcGc@._V1_.jpg" 
+             alt="Ginny & Georgia" class="preview-thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="play-button"></div>
+      </div>
+      <div class="preview-title">Ginny & Georgia</div>
     </div>
   </div>
-
-  <!-- More Google Drive Videos -->
-  <div class="section">
-    <h2>Premium Movies</h2>
-    <div class="video-section">
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview', 'American Fiction (2023)')">
-        <div class="video-title">American Fiction (2023)</div>
-        <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BZjNlNGU0NjAtNjM5NC00ZmY3LWE3NTItYjE0YzQyMGM2OTNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg" alt="American Fiction thumbnail">
-          <div class="play-button"></div>
-        </div>
-      </div>
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview', 'Amsterdam (2023)')">
-        <div class="video-title">Amsterdam (2023)</div>
-        <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BNDQwNzE0ZTItYmZjMC00NjI3LWFlNzctNTExZDY2NWE0Zjc0XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_FMjpg_UX1000_.jpg" alt="Amsterdam thumbnail">
-          <div class="play-button"></div>
-        </div>
-      </div>
+  
+  <!-- Seasons Modal -->
+  <div id="seasonsModal" class="modal">
+    <div class="modal-content" style="max-width: 800px;">
+      <span class="close" onclick="closeSeasonsModal()">&times;</span>
+      <h2 id="seriesTitle" style="color: var(--secondary-color);"></h2>
+      <div id="seasonsContainer" class="categories"></div>
     </div>
   </div>
-
-  <!-- Content Previews -->
-  <div class="section">
-    <h2>New Releases</h2>
-    <div class="content-preview">
-      <div class="preview-item" onclick="openModal('https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview', 'Dear Basketball')">
-        <img src="https://m.media-amazon.com/images/M/MV5BMTU1NzY5NTY0MV5BMl5BanBnXkFtZTgwMjM2NzM5NDM@._V1_FMjpg_UX1000_.jpg" class="preview-thumbnail" alt="Dear Basketball">
-        <div class="preview-title">Dear Basketball</div>
-      </div>
-      <div class="preview-item" onclick="openModal('https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview', 'Dangerous Lies')">
-        <img src="https://m.media-amazon.com/images/M/MV5BNzU0YjI0OGItYTlkYi00YTE5LTk4NWMtM2I3NDQ1YzQyYzI2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" class="preview-thumbnail" alt="Dangerous Lies">
-        <div class="preview-title">Dangerous Lies</div>
-      </div>
-      <div class="preview-item" onclick="openModal('https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1', 'Killer Body')">
-        <img src="https://i.ytimg.com/vi/ZUG3jxb9bFM/maxresdefault.jpg" class="preview-thumbnail" alt="Killer Body">
-        <div class="preview-title">Killer Body</div>
-      </div>
-      <div class="preview-item" onclick="openModal('https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1', 'The Perfect Find')">
-        <img src="https://i.ytimg.com/vi/XiImoJwpfJ8/maxresdefault.jpg" class="preview-thumbnail" alt="The Perfect Find">
-        <div class="preview-title">The Perfect Find</div>
-      </div>
+  
+  <!-- Episodes Modal -->
+  <div id="episodesModal" class="modal">
+    <div class="modal-content" style="max-width: 800px;">
+      <span class="close" onclick="closeEpisodesModal()">&times;</span>
+      <h2 id="seasonTitle" style="color: var(--secondary-color);"></h2>
+      <div id="episodesContainer" class="links" style="display: flex; flex-direction: column; gap: 10px;"></div>
     </div>
   </div>
+</div>
+
+<script>
+// TV Series Database
+const seriesDatabase = {
+  "godfather": {
+    title: "Godfather of Harlem",
+    poster: "https://m.media-amazon.com/images/M/MV5BMTg4MWVjMjYtZGZhYS00MzlmLWFiYmItNDc1OGNmMzczZTM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    description: "The story of crime boss Bumpy Johnson in 1960s Harlem",
+    seasons: {
+      "1": {
+        episodes: {
+          "1": {
+            title: "By Whatever Means Necessary",
+            url: "https://drive.google.com/file/d/1-BpocyAC0C3lIH9y8caPaXil3-0RpzZj/preview"
+          },
+          "2": {
+            title: "The Nitty Gritty",
+            url: "https://drive.google.com/file/d/1WlEEUTNxu07wbd_zcHAWtriXowYkcjmu/preview"
+          },
+          "3": {
+            title: "Episode 3",
+            url: "https://drive.google.com/file/d/1WjDrYsNSVc3XSFVyoYoaITt-ITt_wsLg/preview"
+          }
+        }
+      }
+    }
+  },
+  "forever": {
+    title: "FOREVER (2025)",
+    poster: "https://m.media-amazon.com/images/M/MV5BNDE2OTQ0NjEtNmEwMC00NmRjLThiOGMtN2M1N2Q2YWY0NGY4XkEyXkFqcGc@._V1_.jpg",
+    description: "A new drama series about enduring relationships",
+    seasons: {
+      "1": {
+        episodes: {
+          "1": {
+            title: "Episode 1",
+            url: "https://drive.google.com/file/d/1YhVpBsJIgjdRAvCLWucLZ41TEFVIatd2/preview"
+          }
+        }
+      }
+    }
+  },
+  "ginny-georgia": {
+    title: "Ginny & Georgia",
+    poster: "https://m.media-amazon.com/images/M/MV5BNzFiZTE4MWYtYzNlYi00ZGY0LTg5YjQtMzUxYTQ3NzcyOWQ1XkEyXkFqcGc@._V1_.jpg",
+    description: "A mother and daughter navigate life in a small town",
+    seasons: {
+      "1": {
+        episodes: {
+          "1": { title: "Episode 1", url: "https://drive.google.com/file/d/1zMDL4-MmhUh2QCCtl9ODxPfgY19XLMYn/preview" },
+          "2": { title: "Episode 2", url: "https://drive.google.com/file/d/16n45IF7CEZLvHPkKb6b6Qd5Af-E3u-WY/preview" },
+          "3": { title: "Episode 3", url: "https://drive.google.com/file/d/1LCO7KRuQOm6Rpt6FAAwSL7323bczrteM/preview" },
+          "4": { title: "Episode 4", url: "https://drive.google.com/file/d/1MFlaAAB6VQRo6sl7u9pheH33JJ_zhXz4/preview" },
+          "5": { title: "Episode 5", url: "https://drive.google.com/file/d/1-nU5_VvcnfgL3H2GjrHQx276ykMcj_-8/preview" },
+          "6": { title: "Happy Sweet Sixteen", url: "https://drive.google.com/file/d/1XZkvmDq9LcUJY_pU00fs4pWp4iom18gl/preview" },
+          "7": { title: "Check One, Check Other", url: "https://drive.google.com/file/d/1JZziwYCh1X_EdSUM1JVtqcXh_zfnkpgT/preview" },
+          "8": { title: "Feelings Are Hard", url: "https://drive.google.com/file/d/1I49MgfKeS807bToIoRjQLxlarc-6t1n8/preview" },
+          "9": { title: "The Worst Betrayal", url: "https://drive.google.com/file/d/14RTkstyQS2TR4iQ9RnszxCkrjX3AdJ7U/preview" },
+          "10": { title: "Season 1 Finale", url: "https://drive.google.com/file/d/1nZc3RNjhDt6sAvmBt2p_uaBsYc5vqR9p/preview" }
+        }
+      },
+      "2": {
+        episodes: {
+          "1": { title: "Welcome Back, Bitches!", url: "https://drive.google.com/file/d/1SlgVHobOMmg5yDLwHyflyhJFXrapVsDU/preview" },
+          "2": { title: "Why Does Everything Have...", url: "https://drive.google.com/file/d/1zb2E9SjU_Gv4c1AjeUwxT6ShPA--CjxT/preview" },
+          "3": { title: "What Are You Playing At", url: "https://drive.google.com/file/d/19XfI623cIfZQ5qL6kpWFYDp8MZFL4Jws/preview" },
+          "4": { title: "Happy My Birthday To You", url: "https://drive.google.com/file/d/1OBSU3pVicDgqYHw_63pMLObyCq584pSz/preview" },
+          "5": { title: "Latkes Are Lit", url: "https://drive.google.com/file/d/1imHYJXjqCpHD4au-ivtCMFWITXJ9lHTT/preview" },
+          "6": { title: "A Very Merry Ginny & Georgia", url: "https://drive.google.com/file/d/1ttghE5d8Ig5YF3TpiMxs8QrpVKFnBea9/preview" },
+          "7": { title: "We're Going To Serenade", url: "https://drive.google.com/file/d/1MDipVijWbC2B8B1XLc8JlVL0qQX_oU7D/preview" },
+          "8": { title: "Hark! Darkness Descends!", url: "https://drive.google.com/file/d/1mTEzbnNFP82l6YueTBmFdEx-puWgdGhT/preview" },
+          "9": { title: "Kill Gill", url: "https://drive.google.com/file/d/119MnTNMMrp5q6CK5F6biYxT5eykYq8mT/preview" },
+          "10": { title: "I'm No Cinderella", url: "https://drive.google.com/file/d/1pl9hdTYN4G4IIm4ohYloSGeYtn1PD6RZ/preview" }
+        }
+      },
+      "3": {
+        episodes: {
+          "1": { title: "Season 3 Episode 1", url: "https://drive.google.com/file/d/1Gyc8Gxd3HXe2PWVdaWxSG-6PWkvceLRw/preview" },
+          "2": { title: "Season 3 Episode 2", url: "https://drive.google.com/file/d/1kuhl4OniF9NVbCrheLGdHfkSnhHMIjr9/preview" },
+          "3": { title: "Season 3 Episode 3", url: "https://drive.google.com/file/d/16LF-g12qJ0gNsTWAV7-fN6-H4qlKV0RY/preview" },
+          "4": { title: "Season 3 Episode 4", url: "https://drive.google.com/file/d/1Da7bPYoAhqIxqcOEAy9LkoM7qcdGuiFV/preview" },
+          "5": { title: "Season 3 Episode 5", url: "https://drive.google.com/file/d/1Pkt30hr_hLxIMlbGSGws_kf0msDr_LWT/preview" },
+          "6": { title: "Season 3 Episode 6", url: "https://drive.google.com/file/d/1ThYzrA7FH-QlQgU0VpWTwn8q2D13ivd_/preview" },
+          "7": { title: "Season 3 Episode 7", url: "https://drive.google.com/file/d/1TidfvrfvyPA8fJf9mYrsBeSQHqD2BNR3/preview" },
+          "8": { title: "Season 3 Episode 8", url: "https://drive.google.com/file/d/1cey2uMbRshO6zgwRVnwF2omd2cwFke4B/preview" },
+          "9": { title: "Season 3 Episode 9", url: "https://drive.google.com/file/d/18AFxpJRf36EgFwsLSFDZdqp0GrQh0bXg/preview" },
+          "10": { title: "Season 3 Finale", url: "https://drive.google.com/file/d/19ITil8W_N4v_SBuOINIUBbxogMG5pceZ/preview" }
+        }
+      }
+    }
+  }
+};
+
+// Series functions
+function showSeasons(seriesId, event) {
+  event.stopPropagation();
+  const series = seriesDatabase[seriesId];
+  document.getElementById('seriesTitle').textContent = series.title;
+  
+  const seasonsContainer = document.getElementById('seasonsContainer');
+  seasonsContainer.innerHTML = '';
+  
+  for (const seasonNum in series.seasons) {
+    const seasonBtn = document.createElement('button');
+    seasonBtn.className = 'category';
+    seasonBtn.textContent = `Season ${seasonNum}`;
+    seasonBtn.onclick = (e) => {
+      e.stopPropagation();
+      showEpisodes(seriesId, seasonNum);
+    };
+    seasonsContainer.appendChild(seasonBtn);
+  }
+  
+  document.getElementById('seasonsModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function showEpisodes(seriesId, seasonNum) {
+  const series = seriesDatabase[seriesId];
+  const season = series.seasons[seasonNum];
+  
+  document.getElementById('seasonTitle').textContent = `${series.title} - Season ${seasonNum}`;
+  
+  const episodesContainer = document.getElementById('episodesContainer');
+  episodesContainer.innerHTML = '';
+  
+  for (const episodeNum in season.episodes) {
+    const episode = season.episodes[episodeNum];
+    const episodeItem = document.createElement('div');
+    episodeItem.className = 'episode-item';
+    episodeItem.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: var(--card-bg); border-radius: 5px;">
+        <div>
+          <h4 style="margin: 0; color: var(--secondary-color);">Episode ${episodeNum}: ${episode.title}</h4>
+        </div>
+        <button onclick="event.stopPropagation(); openModal('${episode.url}', '${series.title} S${seasonNum}E${episodeNum}')" 
+                style="background: var(--primary-color); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+          Play
+        </button>
+      </div>
+    `;
+    episodesContainer.appendChild(episodeItem);
+  }
+  
+  closeSeasonsModal();
+  document.getElementById('episodesModal').style.display = 'block';
+}
+
+function closeSeasonsModal() {
+  document.getElementById('seasonsModal').style.display = 'none';
+}
+
+function closeEpisodesModal() {
+  document.getElementById('episodesModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+</script>
+  
+ <!-- More Google Drive Videos -->
+<div class="section">
+  <h2>TV Yami Movies</h2>
+  <div class="video-section" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+
+    <!-- Row 1 -->
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview', 'American Fiction (2023)')">
+      <div class="thumbnail-container">
+        <img src="https://www.thebanner.org/sites/default/files/styles/article_detail_header/public/2024-02/american-fiction.jpg?itok=rx_8zAPo" alt="American Fiction" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">American Fiction (2023)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview', 'Amsterdam (2023)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDQwNzE0ZTItYmZjMC00NjI3LWFlNzctNTExZDY2NWE0Zjc0XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_FMjpg_UX1000_.jpg" alt="Amsterdam" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Amsterdam (2023)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1TDh2-32YW71r9duHgtlJyikEtPDbN5vT/preview', 'Barbarian (2022)')">
+      <div class="thumbnail-container">
+        <img src="https://resizing.flixster.com/Ym6ucXdlZjGTqRWEMVr0r3H16Ro=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA3ZGY2MjgxLTI1NjEtNGFhMC1iYzQ0LTllOGFhYTczNzYxNy5qcGc=" alt="Barbarian" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Barbarian (2022)</div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1mnh3rFhszbSp1a3EOqDJTipTyj0a8t0E/preview', 'Batman (2022)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_.jpg" alt="Batman" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Batman (2022)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1zxf_WQQ9VRBIIu0cudkzmNV1yR7bU8Ah/preview', 'Becoming Michelle Obama (2020)')">
+      <div class="thumbnail-container">
+        <img src="https://i0.wp.com/finessetosuccess.com/wp-content/uploads/2020/05/Becoming-Netflix-Poster.jpeg?resize=1000%2C608&ssl=1" alt="Becoming Michelle Obama" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Becoming Michelle Obama (2020)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1Y19enaxtjjBTHrUxsu5V8yvJMNZp6PTS/preview', 'A minecraft movie (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/A_Minecraft_Movie_poster.jpg/250px-A_Minecraft_Movie_poster.jpg" alt="A minecraft movie" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">A minecraft movie (2025)</div>
+    </div>
+
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1nugd4bimUcc2Tfg8A_wEuhL6x8Z6AbkB/preview', 'In the lost lands (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWYxYjEyYTUtY2FkZC00Y2QwLTk1ZjMtMTAyMTAyMzQ3MDZiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="In the lost lands" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">In the lost lands (2025)</div>
+    </div>
+
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/11fDlbQ3LYqxIfUe9_55Qw6yvEB2z2jwK/preview', 'Havoc (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWJjMjdhNGEtZjEyMi00OTg2LTllMzQtN2JlZWNjYzI4YzFhXkEyXkFqcGc@._V1_.jpg" alt="Havoc" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Havoc (2025)</div>
+    </div>
+
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1BCu3FS_R9nKzEJBEUu2zTU3ayywgsrIQ/preview', 'Death of a unicorn (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjUzMjhkZjktNTU5Mi00MzhmLWJhMTQtZjhkYjczOTEzM2M5XkEyXkFqcGc@._V1_.jpg" alt="Death of a unicorn" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Death of a unicorn (2025)</div>
+    </div>
+
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1YOiq6HTj6vp32hLruAFwnSXVEoAs8Tqq/preview', 'Captain america brave new world (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Captain america brave new world" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Captain america brave new world (2024)</div>
+    </div>
+
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1enEbMq4sgoEs6RcIUW_A2UXc99BFueZz/preview', 'A working man (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYmQxZGIxNTYtYTQwMy00ODdkLWI0MmQtM2E0ZmIyNmYzMGMzXkEyXkFqcGc@._V1_.jpg" alt="A working man" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">A working man (2025)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1LyyBbQrGdYYU6NNHnraLPgPQd3IMtKNg/preview', 'Bones and all (2022)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjUzMWU0ZTEtMjlhYy00YWEwLTlhOTktNzNkMTlhNGNiYmRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Bones and all (2022)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Bones and all (2022)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1xpirkq-MN009knCkL2SJbXUIx_P1zJNX/preview', 'Boiler room (2002)')">
+      <div class="thumbnail-container">
+        <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24891_p_v12_ah.jpg" alt="Boiler room (2002)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Boiler room (2002)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1RnUbq8___fcKDWe5_WKABXxo_bhp0Tct/preview', 'Beyonce-lemonade')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png/250px-Beyonce_-_Lemonade_%28Official_Album_Cover%29.png" alt="Beyonce-lemonade" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Beyonce-lemonade</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1VNhlwyiTbG9-5iiTVA14TdwD5q9bdBhx/preview', 'The Monkey (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDIxYzI0OGQtZTZmZS00ZDU5LWI0Y2YtNzc5ZTk2NzMwMDM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Monkey (2025)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">The Monkey (2025)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/13S8PEPuuqs3nWWZtBQZM_ntfXrhoakMu/preview', 'Borat (2006)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk0MTQ3NDQ4Ml5BMl5BanBnXkFtZTcwOTQ3OTQzMw@@._V1_.jpg" alt="Borat (2006)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Borat (2006)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1innBRr5qlXDidnUoglZhthFTgHPHgQmK/preview', 'The Actor (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWM1OTQ3MjAtNDQzZC00ZDE3LWJkYWEtOTQxZTM0ZGM3YWNmXkEyXkFqcGc@._V1_.jpg" alt="The Actor" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">The Actor (2025)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/16s3wgjAcgpk62Mko70fC3kpk3U3hg5jT/preview', 'Snow White (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2UwOGUxMzEtMzEyZi00NjEwLTkxOTMtYTljOWEzYjYyMWNjXkEyXkFqcGc@._V1_.jpg" alt="Snow White" style="width:100%">govF9F2/preview', 'Snow White (2025)')">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Snow White (2025)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1eH05pPVCjnvPceqgtJxCKfEJkfq87T4U/preview', 'Opus (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNjgzMzczNmItMWEwOC00NjE0LWEwMGMtNjQ2NWY5ZjRkMDYzXkEyXkFqcGc@._V1_.jpg" alt="Opus" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Opus (2025)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1CpdSOjZvS3EJxLRjXi2AaPuPJqAOyuEc/preview', 'ODessa(2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTAyMjBmY2EtY2MxOC00ZWEwLTg0ZWMtMjlkZWJlZjQ1MjRmXkEyXkFqcGc@._V1_.jpg" alt="ODessa" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">ODessa (2025)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1Pn071sCdYsHHcSG9T2Ja4BdpawaZfeId/preview', 'Magazine Dreams (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNTBkYjk0YzMtNDAwYy00ZTU4LTg2MGUtZWVjNzFiZmE3NzUzXkEyXkFqcGc@._V1_.jpg" alt="Magazine Dreams" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Magazine Dreams (2025)</div>
+    </div>
+
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1LAvW5-2H5NJj5-fhoeuYE28efMNa0JaA/preview', 'My Fault London (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BN2MzOTJiOTItODBjOS00MjVhLWFiOWQtOTVjOTAyM2NkODM2XkEyXkFqcGc@._V1_.jpg" alt="My Fault London (2025)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">My Fault London (2025)</div>
+    </div>
+
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1g-LPX-iHSi6q3sR63XQD-ecakM9xUayt/preview', 'Coming to America (1988)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDY1N2RiYWMtMTNmMy00MWQzLTlkYzAtYzRlZmM5OGZhMjUwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Coming to America (1988)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Coming to America (1988)</div>
+    </div>
+
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1YdFWDgBIMmjOTvGctsBS7gKWHmnxMAMH/preview', 'Contagion_(2011)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY3MDk5MDc3OV5BMl5BanBnXkFtZTcwNzAyNTg0Ng@@._V1_.jpg" alt="Contagion_(2011)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Contagion_(2011)</div>
+    </div>
+
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1NvUTaaouRlKOt1NBufUketeBzAvI9O2z/preview', 'challengers (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTcyZGIyODctZGJhOS00MWUyLWI5ZWEtMjg4YzhkMDczMDBhXkEyXkFqcGc@._V1_.jpg" alt="Challengers 2024" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Challengers 2024</div>
+    </div>
+
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1pb2jr3UTQ1VBUm7lXOiWJxqyZY782QNx/preview', 'Central intelligence (2016)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjA2NzEzNjIwNl5BMl5BanBnXkFtZTgwNzgwMTEzNzE@._V1_.jpg" alt="Central intelligence (2016)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Central intelligence (2016)</div>
+    </div>
+
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/12GjFJkbvcif4br6YUnPO-HU32R1Gwj_J/view?usp=sharing/preview', 'Cardiac records (2008)')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Cadillac_records_poster.jpg" alt="cardiac records 2008" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Cardiac records 2008</div>
+    </div>
+
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1Rzs7wxEs25RBIqGutT8r9v2PXY6GXipc/preview', 'Bruce almighty 2003')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BZWM2ZjA2OTctZmRhMy00ZDIzLTkwZGQtYTRlNmQwZWZmMDBlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="bruce almighty 2003" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Bruce almighty 2003</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1cP6MniniiDVSLQvG44e4G2iugkGvtQPk/preview', 'Get out (2016)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/I/81l6wfzojiL._AC_UF894,1000_QL80_.jpg" alt="Get out (2016)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Get out (2016)</div>
+    </div>
+    
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1JYOjHgcJBiPlQ-i-jhfZ2YU9NWxoak6J/preview', 'Entergalactic (2022)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BM2JlYzU3OTQtM2FmYy00OGZiLTllM2YtMjUwZGY0NmUzODE3XkEyXkFqcGc@._V1_.jpg" alt="Entergalactic (2022)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Entergalactic (2022)</div>
+    </div>
+    
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1n18z90qkyxB0kaGwGlwkRVA2Va4ta5rn/preview', 'death at a funeral 2010')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTYzMDQxODE0NF5BMl5BanBnXkFtZTcwODE0MDk0Mw@@._V1_.jpg" alt="death at a funeral 2010" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">death at a funeral 2010</div>
+    </div>
+    
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview', 'Dear Basketball')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/Dear-Basketball.jpg" alt="Dear Basketball style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Dear Basketball</div>
+    </div>
+    
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview', 'Dangerous lies 2021')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWNhYmRlMTEtMTNlNi00NzYxLWEyM2ItNjI0MzFhMzU4ODQzXkEyXkFqcGc@._V1_.jpg" alt="Dangerous lies 2021" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Dangerous lies 2021</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1vUieZz5Zr4In1YaZMhLcN3efQnvRKtyl/preview', 'Creed 2 (2018)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTBmYTg3YTItZjUzYi00MGU2LThiNDUtMDA3NjNmMTFiYzZkXkEyXkFqcGc@._V1_.jpg" alt="Creed II (2018)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Creed 2 (2018)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/12gQgIn5a9_BWlh0V_WgnrVvGyChvTCB0/preview', 'Creed 3 (2023)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWY0MTRmY2YtMzBlYi00NjlkLThkZWYtMmE2NzJiZmIzODFkXkEyXkFqcGc@._V1_.jpg" alt="Creed 3 (2023)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Creed 3 (2023)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1XeAMwwzc6SiI7u0orghzEbtUwuh8HEUS/preview', 'Creed (2015)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNWM3NjY2ZDctMGZiYy00OGFlLThkMTktOTY2MDM2YjE2OTliXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Creed (2015)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Creed (2015)</div>
+    </div>
+    
+    
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/11bdcKkGOjB0S2RVpl3aU7388BpHHnb6d/preview', 'Brown sugar 2002')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/40/Brown_sugar_poster.jpg" alt="brown sugar 2002" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Brown sugar 2002</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OvjeAexObfkLO1OgrCvMrbZFr7bWRHr7/preview', 'bagman 2024')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzAwMDllN2UtMDk0My00YWEwLWJhNGUtOGEzYzYwNmZjMzE2XkEyXkFqcGc@._V1_.jpg" alt="bagman 2024" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">bagman 2024)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1M21usfSm8n93BLcVPEqUCYAzuQnBk0x1/preview', 'blade runner black out 2022')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTA4OTNmNDEtYzIyNS00OTE4LWJiODctM2RmOTA3YzdmMTZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="blade runner black out 2022" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">blade runner black out 2022</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1sOzc93cRu4FdZQmDSgMCixi0AElgT8AX/preview', 'a complete unknown 2024')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTA2NTA5NDYtMzlkOC00MTQxLWI0NDQtMzk2M2YzMGE4MTkxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="a complete unknown 2024" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">a complete unknown 2024</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1QweV29ls_w-Q4Tg4hJHjy4WSoBX4kaC7/preview', 'the luckiest man in america 2024')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNWI2MmZmZjUtYTRhYi00ZWVhLWEwZjYtYjgwMGI4NDg2YzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="the luckiest man in america 2024" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">the luckiest man in america 2024</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1jHmuWxSR9PdmxvCOrJe7D_xX7BRS0-e2/preview', 'Kendrick Lamar Live The Big Steppers Tour 2022')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/69/Kendrick_Lamar_Live_Steppers_Poster.jpg" alt="Kendrick Lamar Live The Big Steppers Tour 2022" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Kendrick Lamar Live The Big Steppers Tour 2022</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/15rH0Vtn2GaZG15YsKQPp_Qkickas2EGx/preview', 'I am legend (2006)')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/I_am_legend_teaser.jpg/250px-I_am_legend_teaser.jpg" alt="I am legend (2006)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">I am legend (2006)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/19dFcsE57bPOje0cPHyRcVXfxp1r0E1Pv/preview', 'Dr. Bird's Advice for Sad Poets (2021)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTAyZGJiMjktNTE0ZC00YTI5LThjY2YtMDhkNDNkZDFiYjY5XkEyXkFqcGc@._V1_.jpg" alt="Dr. Bird's Advice for Sad Poets (2021)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Dr. Bird's Advice for Sad Poets (2021)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1IsADDfOPIdxZXp44gyOVaTdvk6JIkNCX/preview', 'Strange Darling (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDE2OTQ0NjEtNmEwMC00NmRjLThiOGMtN2M1N2Q2YWY0NGY4XkEyXkFqcGc@._V1_.jpg" alt="Strange Darling (2024)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Strange Darling (2024)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1TKP9l-nslAj30xwokbKQlr_3HtKBuKrk/preview', 'Never Let Go (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzM4Mzk1YjctMWFkYi00ZDdkLTk2MmQtMmExZDNlNGEyMjBjXkEyXkFqcGc@._V1_.jpg" alt="Never Let Go (2024)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Never Let Go (2024)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1AfioZv9G3QSrExxvZX58MGLiUnOiShkm/preview', 'Meet_the_Browns_(2008)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTIyNTgyMjgxMF5BMl5BanBnXkFtZTcwMjc3NzI2MQ@@._V1_.jpg" alt="Meet_the_Browns_(2008)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Meet_the_Browns_(2008)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OnhPStBGagxz2V__6yas_uDooLmcdBZF/preview', 'Attack the Block (2011)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjAzNjc1MjgzOF5BMl5BanBnXkFtZTcwMzE3Njk5NQ@@._V1_FMjpg_UX1000_.jpg" alt="Attack the Block" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Attack the Block (2011)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1GcEfhlP5mb7FLLsqxZxGhAsRikNEW-Ml/preview', 'laid in america 2016)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BOWIyODRhZGMtNTU1MS00M2ZlLWIzMTQtYmVkMzBhZmNjNTExXkEyXkFqcGc@._V1_.jpg" alt="laid in america 2016" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">laid in america 2016)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1SKHJ4ooDFcwzc-eDDpq6X8a8ET7FwhHz/preview', 'Katt_Williams_Woke_Foke_(2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNmIzZDYxNDktMjJhMC00MzgwLTgzYjMtMmM4MTI0MWEwYzk0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Katt_Williams_Woke_Foke_(2024)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Katt_Williams_Woke_Foke_(2024)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1GCFi6mUv4pUPE3AqHuck0Pjb9T-s1acU/preview', 'cry freedom 1987)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjJkMWQyMzctZGQ5ZS00YWM3LWI2OWQtNjIxNzNlMWY3YzY2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="cry freedom 1987" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">cry freedom 1987)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/18rtJ8oHyykOiYPXrRqQpofd7B9H_jxg2/preview', 'a nightmare on elm street 2010)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BODIxMTQ0NTIxM15BMl5BanBnXkFtZTcwMzY1NDAyMw@@._V1_FMjpg_UX1000_.jpg" alt="a nightmare on elm street 2010" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">a nightmare on elm street 2010)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview', 'A United Kingdom (2017)')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/A_United_Kingdom_poster.jpg" alt="A United Kingdom" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">A United Kingdom (2017)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1LvRf3wc_QmPqWyQtZTIw4fjgZAdH0Qbz/preview', 'Umlazi Gangstar (2010)')">
+      <div class="thumbnail-container">
+        <img src="https://i.ytimg.com/vi/hKT_ouVWRBw/hqdefault.jpg" alt="Umlazi Gangstar (2010)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Umlazi Gangstar (2010)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1EpHbrXhUG0lIz26HjHKYDWHg6wzLODJo/preview', 'Shadow force (2025)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTUyZTUyOTMtOGU5OC00MmM1LTk0NWUtMjNlMTU4ZTkwMDRjXkEyXkFqcGc@._V1_.jpg" alt="Shadow force (2025)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Shadow force (2025)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/15qTPNerTsumS4BMfRxBxlcNmwrYttXD1/preview', 'Freaky Tales (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTYyNmYyN2EtYTFjNS00ZWY5LWJiZmMtNTk5N2MyYzkzMDhmXkEyXkFqcGc@._V1_.jpg" alt="Freaky Tales 2024" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Freaky Tales (2024)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1rv8ghGB3tNb7eRRcgNA-YIB7CvkgHXSI/preview', 'Bird (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMGYzZDI4OTktZWJkZC00NjdiLTlkMjYtMzA1ZTVjMDU2M2FhXkEyXkFqcGc@._V1_.jpg" alt="Bird (2024)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Bird (2024)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1rsx6R6sweT8Qh55hoJXICT4glhm4uZTC/preview', 'Uglies (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGEyYmQxNjQtNDlkYy00MDlkLTgyNDUtZDA0NGY3ZTNlZWU0XkEyXkFqcGc@._V1_.jpg" alt="Uglies (2024)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Uglies (2024)</div>
+    </div>
+
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1pUR-N9EOP0_Thz6vbekv1vG9qhTHn_XI/preview', 'Wasp (2024)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzE1YTljYTgtNzczZi00NTAyLThkYjUtYWExZDU4ZTY5YTdlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Wasp (2024)" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Wasp (2024)</div>
+    </div>
+      
+          <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview', 'Air (2023)')">
+      <div class="thumbnail-container">
+        <img src="https://pmdoc.ua/wp-content/uploads/air.jpg" alt="Air" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Air (2023)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1Zhqc91jNSFW3vpaER2U-V4UcEgovF9F2/preview', 'Belle (2013)')">
+      <div class="thumbnail-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Belle_poster.jpg" alt="Belle" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Belle (2013)</div>
+    </div>
+
+  </div>
+</div>
 
   <div class="section">
     <h2>Why TV Yami?</h2>
@@ -694,7 +1434,6 @@
   </div>
 
   <!-- Bottom Ad Position -->
-  <div class="ad-container">
     <script type='text/javascript' src='//pl26640661.profitableratecpm.com/32/da/24/32da24bbb349b1c40dc2190cabe48290.js'></script>
   </div>
 
@@ -713,139 +1452,436 @@
     Is there a movie or TV show you want to watch on our website?<br>
     Let us know by leaving a comment or sending a DM:<br>
     <strong>IG:</strong> @tvyami_sa<br>
+    <strong>Youtube:</strong> @tvyami2<br>
     <strong>TikTok:</strong> @tvyami2<br><br>
 
     <strong>Are you a business owner?</strong><br>
     Advertise with us to reach more people. Send us a DM:<br>
     <strong>IG:</strong> @tvyami_sa<br>
+    <strong>Youtube:</strong> @tvyami2<br>
     <strong>TikTok:</strong> @tvyami2<br><br>
 
   All content is hosted by third-party services
     
-© 2025 Amaculo. All rights reserved.
+© 2025 TV Yami All rights reserved.
   </footer>
 
   <script>
-   // Theme Toggle
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
-  document.body.setAttribute('data-theme', 
-    document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
-});
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.setAttribute('data-theme', 
+        document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
+    });
+// TV Series Database - SINGLE declaration
+// TV Series Database
+const seriesDatabase = {
+  "godfather": {
+    title: "Godfather of Harlem",
+    poster: "https://m.media-amazon.com/images/M/MV5BZTk1NzQwYjYtOTFmYS00YzE0LWJjY2UtZDU4MGJiNGQ0ZmY5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    description: "The story of crime boss Bumpy Johnson, who in the early 1960s returned from prison to find his neighborhood controlled by the Italian mob.",
+    seasons: {
+      "1": {
+        episodes: {
+          "1": {
+            title: "By Whatever Means Necessary",
+                       url: "https://drive.google.com/file/d/1-BpocyAC0C3lIH9y8caPaXil3-0RpzZj/preview",
+            thumbnail: "https://m.media-amazon.com/images/M/MV5BNzU5Yzk1ODktNzA3OS00YzQ0LWI5YzItYzhlODQ2NThjYjFkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+          },
+          "2": {
+            title: "The Nitty Gritty",
+            url: "https://drive.google.com/file/d/1WlEEUTNxu07wbd_zcHAWtriXowYkcjmu/preview",
+            thumbnail: "https://m.media-amazon.com/images/M/MV5BNzU5Yzk1ODktNzA3OS00YzQ0LWI5YzItYzhlODQ2NThjYjFkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+          }
+          // Add more episodes as needed
+        }
+      }
+      // Add more seasons as needed
+    }
+  }
+  // Add more series as needed
+};
 
-// Content Database - WITH FIXED TITLES
-const contentDatabase = [
+// Series functions
+function showSeasons(seriesId) {
+  const series = seriesDatabase[seriesId];
+  document.getElementById('seriesTitle').textContent = series.title;
+  
+  const seasonsContainer = document.getElementById('seasonsContainer');
+  seasonsContainer.innerHTML = '';
+  
+  // Create season buttons
+  for (const seasonNum in series.seasons) {
+    const seasonBtn = document.createElement('button');
+    seasonBtn.className = 'category';
+    seasonBtn.textContent = `Season ${seasonNum}`;
+    seasonBtn.onclick = (e) => {
+      e.stopPropagation();
+      showEpisodes(seriesId, seasonNum);
+    };
+    seasonsContainer.appendChild(seasonBtn);
+  }
+  
+  document.getElementById('seasonsModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function showEpisodes(seriesId, seasonNum) {
+  const series = seriesDatabase[seriesId];
+  const season = series.seasons[seasonNum];
+  
+  document.getElementById('seasonTitle').textContent = `${series.title} - Season ${seasonNum}`;
+  
+  const episodesContainer = document.getElementById('episodesContainer');
+  episodesContainer.innerHTML = '';
+  
+  // Create episode list
+  for (const episodeNum in season.episodes) {
+    const episode = season.episodes[episodeNum];
+    const episodeItem = document.createElement('div');
+    episodeItem.className = 'episode-item';
+    episodeItem.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+        <img src="${episode.thumbnail}" alt="${episode.title}" 
+             style="width: 120px; height: 70px; object-fit: cover; border-radius: 5px;">
+        <div>
+          <h4 style="margin: 0; color: var(--secondary-color);">Episode ${episodeNum}: ${episode.title}</h4>
+          <button onclick="openModal('${episode.url}', '${series.title} S${seasonNum}E${episodeNum}')" 
+                  style="background: var(--primary-color); color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+            Watch Now
+          </button>
+        </div>
+      </div>
+    `;
+    episodesContainer.appendChild(episodeItem);
+  }
+  
+  closeSeasonsModal();
+  document.getElementById('episodesModal').style.display = 'block';
+}
+
+function closeSeasonsModal() {
+  document.getElementById('seasonsModal').style.display = 'none';
+}
+
+function closeEpisodesModal() {
+  document.getElementById('episodesModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+    // Content database for search
+  const contentDatabase = [
+  // Google Drive Movies (with corrected titles)
   { 
-    displayTitle: "A United Kingdom (2017)", // Exact title you want
-    title: "A United Kingdom", 
-    year: "2017", 
-    url: "https://drive.google.com/file/d/1aXNXRaSqb" 
+    title: "A United Kingdom (2017)", 
+    url: "https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview", 
+    type: "movie" 
+  },
+    
+  { 
+    title: "Air (2023)", 
+    url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview", 
+    type: "movie" 
+  },
+  
+  // YouTube Movies (with corrected titles)
+  { 
+    title: "Big Fish & Begonia (2016)",  // Changed from "Killer Body"
+    url: "https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1", 
+    type: "movie" 
   },
   { 
-    displayTitle: "Air (2023)", 
-    title: "Air", 
-    year: "2023", 
-    url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQg" 
+    title: "The Great Santini (1979)",  // Changed from "The Perfect Find"
+    url: "https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1", 
+    type: "movie" 
   },
-  // ... [copy ALL your videos in this format] ...
+  { 
+    title: "The Devils Female (1974)",  // Changed from "The Tutor"
+    url: "https://youtu.be/QEU0QfTdtlw?si=9TWtPJ-rO7zNEj7n", 
+    type: "movie" 
+  },
+  { 
+    title: "Parallel (2024)",  // Changed from "The Locksmith"
+    url: "https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1", 
+    type: "movie" 
+  },
+  { 
+    title: "Claudine (1974)",  // Changed from "The Ritual Killer"
+    url: "https://youtu.be/G6yydjUU68A?si=xi1Lq7mXERilATMu", 
+    type: "movie" 
+  },
+  { 
+    title: "Clown (2014)",  // Changed from "Beautiful Disaster"
+    url: "https://youtu.be/Pail6KcM6DY?si=5zKypMdDkK6-MJXy", 
+    type: "movie" 
+  },
+  
+  // More Google Drive Movies
+  { 
+    title: "American Fiction (2023)", 
+    url: "https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview", 
+    type: "movie" 
+  },
+  { 
+    title: "Amsterdam (2023)", 
+    url: "https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview", 
+    type: "movie" 
+  },
+  { 
+    title: "Dear Basketball (2017)", 
+    url: "https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview", 
+    type: "movie" 
+  },
+  { 
+    title: "Dangerous Lies (2020)", 
+    url: "https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview", 
+    type: "movie" 
+  },
+  
+  // TV Series
+  { 
+    title: "Skeem Saam (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/skeemsaam", 
+    type: "series" 
+  },
+  { 
+    title: "Ithonga (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/ithonga", 
+    type: "series" 
+  },
+  { 
+    title: "Genesis (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/genesis", 
+    type: "series" 
+  },
+  { 
+    title: "Xrepo (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/xrepo", 
+    type: "series" 
+  }
 ];
 
-// Search Functionality
-document.getElementById('searchInput').addEventListener('input', function() {
-  // ... [keep your existing search code] ...
-});
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
 
-// Modal Player Functions
-function openModal(videoUrl, videoTitle) {
-  // ... [keep your existing modal code] ...
-}
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      searchResults.innerHTML = '';
+      
+      if (query.length < 2) {
+        searchResults.style.display = 'none';
+        return;
+      }
+      
+      const results = contentDatabase.filter(item => 
+        item.title.toLowerCase().includes(query) || 
+        item.year.includes(query) ||
+        item.type.includes(query)
+      );
+      
+      if (results.length > 0) {
+        results.forEach(item => {
+          const resultItem = document.createElement('div');
+          resultItem.className = 'search-result-item';
+          resultItem.innerHTML = `
+            <strong>${item.title}</strong> (${item.year}) - ${item.type}
+          `;
+          resultItem.addEventListener('click', () => {
+            if (item.url.includes('youtube.com') || item.url.includes('drive.google.com')) {
+              openModal(item.url, `${item.title} (${item.year})`);
+            } else {
+              window.open(item.url, '_blank');
+            }
+            searchResults.style.display = 'none';
+            searchInput.value = '';
+          });
+          searchResults.appendChild(resultItem);
+        });
+        searchResults.style.display = 'block';
+      } else {
+        const noResults = document.createElement('div');
+        noResults.className = 'search-result-item';
+        noResults.textContent = 'No results found';
+        searchResults.appendChild(noResults);
+        searchResults.style.display = 'block';
+      }
+    });
 
-// All Videos Feature
-document.getElementById('showAllVideosBtn').addEventListener('click', function() {
-  const container = document.getElementById('allVideosContainer');
-  container.innerHTML = ''; // Clear previous
+    // Close search results when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+
+    // Modal functions
+    let currentVideoIndex = 0;
+    const videoUrls = contentDatabase.filter(item => 
+      item.url.includes('youtube.com') || item.url.includes('drive.google.com')
+    ).map(item => ({
+      url: item.url,
+      title: `${item.title} (${item.year})`
+    }));
+
+    function openModal(videoUrl, videoTitle = '') {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      const videoTitleElement = document.getElementById('currentVideoTitle');
+      
+      currentVideoIndex = videoUrls.findIndex(item => item.url === videoUrl);
+      modalVideo.src = videoUrl;
+      videoTitleElement.textContent = videoTitle;
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function playNextVideo() {
+      currentVideoIndex = (currentVideoIndex + 1) % videoUrls.length;
+      const nextVideo = videoUrls[currentVideoIndex];
+      document.getElementById('modalVideo').src = nextVideo.url;
+      document.getElementById('currentVideoTitle').textContent = nextVideo.title;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      modalVideo.src = "";
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('videoModal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+
+    // Carousel functionality
+    let currentCarouselIndex = 0;
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const carouselInner = document.querySelector('.carousel-inner');
+
+    function moveCarousel(direction) {
+      currentCarouselIndex += direction;
+      
+      if (currentCarouselIndex < 0) {
+        currentCarouselIndex = carouselItems.length - 1;
+      } else if (currentCarouselIndex >= carouselItems.length) {
+        currentCarouselIndex = 0;
+      }
+      
+      carouselInner.style.transform = `translateX(-${currentCarouselIndex * 100}%)`;
+    }
+
+    // Auto-rotate carousel
+    setInterval(() => {
+      moveCarousel(1);
+    }, 5000);
+
+    // Make search work on Enter key
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const query = this.value.toLowerCase();
+        if (query.length > 0) {
+          const results = contentDatabase.filter(item => 
+            item.title.toLowerCase().includes(query) || 
+            item.year.includes(query) ||
+            item.type.includes(query)
+          );
+          
+          if (results.length > 0) {
+            if (results[0].url.includes('youtube.com') || results[0].url.includes('drive.google.com')) {
+              openModal(results[0].url, `${results[0].title} (${results[0].year})`);
+            } else {
+              window.open(results[0].url, '_blank');
+            }
+          }
+          searchResults.style.display = 'none';
+        }
+      }
+    });
+
+    // Ad fallback handling
+    window.addEventListener('load', function() {
+      const adContainers = document.querySelectorAll('.ad-container');
+      adContainers.forEach(container => {
+        const iframes = container.getElementsByTagName('iframe');
+        if (iframes.length === 0) {
+          const fallback = container.querySelector('.ad-fallback');
+          if (fallback) fallback.style.display = 'block';
+        }
+      });
+    });
+    function showAllVideos() {
+  // Hide other sections
+  document.querySelectorAll('.section').forEach(section => {
+    section.style.display = 'none';
+  });
   
-  contentDatabase.forEach(video => {
+  // Show all videos section
+const allVideosSection = document.getElementById('allVideosSection');
+const allVideosContainer = document.getElementById('allVideosContainer');
+
+// Clear previous results
+allVideosContainer.innerHTML = '';
+
+// Filter only movies (exclude series if needed)
+const moviesOnly = contentDatabase.filter(item => item.type === 'movie');
+
+// Sort A-Z and create video items
+moviesOnly.sort((a,b) => a.title.localeCompare(b.title))
+  .forEach(video => {
     const videoItem = document.createElement('div');
     videoItem.className = 'all-videos-item';
+    
+    // Get correct thumbnail URL
+    const thumbUrl = video.url.includes('youtube.com') 
+      ? `https://i.ytimg.com/vi/${video.url.split('/embed/')[1].split('?')[0]}/maxresdefault.jpg`
+      : 'https://via.placeholder.com/300x450?text=Movie';
+    
     videoItem.innerHTML = `
-      <img src="${getThumbnail(video.url)}" class="all-videos-thumbnail">
-      <div class="all-videos-title">${video.displayTitle || video.title}</div>
+      <div class="thumbnail-container">
+        <img src="${thumbUrl}" alt="${video.title}" 
+             onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">${video.title}</div>
     `;
-    videoItem.onclick = () => openModal(video.url, video.displayTitle || video.title);
-    container.appendChild(videoItem);
+    
+    videoItem.onclick = () => openModal(video.url, video.title);
+    allVideosContainer.appendChild(videoItem);
   });
-});
 
-// Helper function for thumbnails
-function getThumbnail(url) {
-  if (url.includes('youtube.com')) {
-    const vidId = url.split('/embed/')[1].split('?')[0];
-    return `https://i.ytimg.com/vi/${vidId}/maxresdefault.jpg`;
-  }
-  return 'https://via.placeholder.com/300x450?text=No+Thumbnail';
-}
-</script>
-  // Theme Toggle
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
-  document.body.setAttribute('data-theme', 
-    document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
-});
-
-// Content Database - WITH FIXED TITLES
-const contentDatabase = [
-  { 
-    displayTitle: "A United Kingdom (2017)", // Exact title you want
-    title: "A United Kingdom", 
-    year: "2017", 
-    url: "https://drive.google.com/file/d/1aXNXRaSqb" 
-  },
-  { 
-    displayTitle: "Air (2023)", 
-    title: "Air", 
-    year: "2023", 
-    url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQg" 
-  },
-  // ... [copy ALL your videos in this format] ...
-];
-
-// Search Functionality
-document.getElementById('searchInput').addEventListener('input', function() {
-  // ... [keep your existing search code] ...
-});
-
-// Modal Player Functions
-function openModal(videoUrl, videoTitle) {
-  // ... [keep your existing modal code] ...
-}
-
-// All Videos Feature
-document.getElementById('showAllVideosBtn').addEventListener('click', function() {
-  const container = document.getElementById('allVideosContainer');
-  container.innerHTML = ''; // Clear previous
+// Show the section
+allVideosSection.style.display = 'block';
   
-  contentDatabase.forEach(video => {
-    const videoItem = document.createElement('div');
-    videoItem.className = 'all-videos-item';
-    videoItem.innerHTML = `
-      <img src="${getThumbnail(video.url)}" class="all-videos-thumbnail">
-      <div class="all-videos-title">${video.displayTitle || video.title}</div>
-    `;
-    videoItem.onclick = () => openModal(video.url, video.displayTitle || video.title);
-    container.appendChild(videoItem);
-  });
-});
-
-// Helper function for thumbnails
-function getThumbnail(url) {
-  if (url.includes('youtube.com')) {
-    const vidId = url.split('/embed/')[1].split('?')[0];
-    return `https://i.ytimg.com/vi/${vidId}/maxresdefault.jpg`;
+  // Populate videos if empty
+  const container = document.getElementById('allVideosContainer');
+  if (container.children.length === 0) {
+    contentDatabase
+      .filter(video => video.url.includes('youtube.com') || video.url.includes('drive.google.com'))
+      .sort((a,b) => a.title.localeCompare(b.title))
+      .forEach(video => {
+        const videoItem = document.createElement('div');
+        videoItem.style.width = '150px';
+        videoItem.style.cursor = 'pointer';
+        videoItem.innerHTML = `
+          <img src="${video.url.includes('youtube.com') 
+            ? 'https://i.ytimg.com/vi/'+video.url.split('/embed/')[1].split('?')[0]+'/maxresdefault.jpg' 
+            : 'https://via.placeholder.com/300x450?text=No+Thumbnail'}" 
+            style="width:100%; height:200px; object-fit:cover; border-radius:8px; border:2px solid #FF4500;"
+            onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+          <div style="margin-top:8px; font-size:14px; color:#FFD700; text-align:center;">
+            ${video.title} (${video.year})
+          </div>
+        `;
+        videoItem.onclick = () => openModal(video.url, `${video.title} (${video.year})`);
+        container.appendChild(videoItem);
+      });
   }
-  return 'https://via.placeholder.com/300x450?text=No+Thumbnail';
 }
-</script>
   </script>
 </body>
 </html>
